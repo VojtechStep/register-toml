@@ -1,0 +1,21 @@
+[config]
+api = { hostname = "localhost", port = 3000 }
+
+[probe]
+[[probe.nodes]]
+id = "api"
+
+[[probe.nodes.replicas]]
+address = "localhost:3001"
+
+[[probe.nodes.replicas]]
+address = "localhost:3002"
+
+[[probe.nodes]]
+id = "web"
+
+[[probe.nodes.replicas]]
+address = "localhost:4000"
+
+[[probe.nodes.replicas]]
+address = "localhost:4001"

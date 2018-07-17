@@ -1,0 +1,35 @@
+{
+  "name": "register-toml",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Vojtech Stepancik",
+    "email": "vojtechstepancik@outlook.com",
+    "url": "https://github.com/VojtechStep"
+  },
+  "description": "Register a require hook for .toml files",
+  "keywords": [
+    "register",
+    "require",
+    "toml"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VojtechStep/register-toml"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test":
+      "node -r ./index.js -r babel-register ./test/es-default.js && node -r ./index.js -r babel-register ./test/es-named.js && node -r ./index.js ./test/commonjs-default.js && node -r ./index.js ./test/commonjs-named.js && node -r ./test/_register.js"
+  },
+  "dependencies": {
+    "pirates": "^4.0.0",
+    "toml": "^2.3.3",
+    "tosource": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-register": "^6.26.0"
+  }
+}

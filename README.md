@@ -50,7 +50,7 @@ or
 # Usage
 
 ```js
-require('register-ts')
+require('register-toml');
 ```
 
 Or for `require()`ing .toml in the REPL:
